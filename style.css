@@ -1,0 +1,145 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  color: #2b2b2b;
+}
+.container {
+  max-width: 1140px;
+}
+.navbar-brand {
+  margin-right: 45px;
+}
+/* .nav-link + .nav-link {
+  margin-left: 33px;
+} */
+.menu-right {
+  display: flex;
+  flex-direction: column;
+}
+.city {
+  font-weight: 400;
+}
+.phone a {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: right;
+  color: #2b2b2b;
+  text-decoration: none;
+}
+.promo {
+  color: white;
+  min-height: 507px;
+  background-image: url("img/bg.jpg");
+  background-repeat: no-repeat;
+}
+.promo-title {
+  margin-top: 125px;
+}
+.promo-subtitle {
+  margin-top: 13px;
+}
+.form-control {
+  height: 51px;
+  width: 217px;
+  border-radius: 0;
+}
+.btn-danger {
+  height: 51px;
+  width: 214px;
+  border-radius: 0;
+}
+
+.slider {
+  min-height: 533px;
+  text-align: center;
+}
+.news {
+  margin-top: 84px;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 39px;
+}
+.tns-controls {
+  display: none;
+}
+.tns-outer {
+  margin-top: 62px;
+}
+
+.tns-outer {
+  position: relative;
+}
+.tns-outer::before {
+  position: absolute;
+  left: -15px;
+  top: -14px;
+  content: "";
+  width: 288px;
+  height: 243px;
+  background-color: #d51522;
+}
+.tns-outer::after {
+  position: absolute;
+  right: 70px;
+  top: 16px;
+  content: "";
+  width: 288px;
+  height: 243px;
+  background-color: #6f61a0;
+  z-index: -1;
+}
+.tns-nav {
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+}
+.tns-nav button {
+  border: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 9px;
+}
+.tns-nav-active {
+  background: #d51522;
+}
+.card {
+  width: 349px;
+  height: 243px;
+  font-family: "Roboto", sans-serif;
+}
+.card-title {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #636363;
+  margin-top: 34px;
+}
+.card-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #2b2b2b;
+}
+.card-body btn {
+  width: 156px;
+  height: 44px;
+  border-radius: 0;
+}
+.footer {
+  min-height: 163px;
+  background: #211f2b;
+}
+.footer-inner {
+  min-height: 163px;
+}
+.footer-links {
+  transform: translateX(50%);
+}
+.footer-links a {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+}
