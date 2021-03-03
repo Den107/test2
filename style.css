@@ -6,8 +6,22 @@ body {
 .container {
   max-width: 1140px;
 }
+.navbar-nav {
+  background-color: white;
+  z-index: 10;
+  position: relative;
+}
 .navbar-brand {
   margin-right: 45px;
+}
+.navbar-toggler {
+  position: absolute;
+}
+.navbar-toggler-icon {
+  display: none;
+}
+.navbar-toggler::after {
+  content: url("img/burger.png");
 }
 /* .nav-link + .nav-link {
   margin-left: 33px;
@@ -130,6 +144,7 @@ body {
 .footer {
   min-height: 163px;
   background: #211f2b;
+  width: 100%;
 }
 .footer-inner {
   min-height: 163px;
@@ -142,4 +157,41 @@ body {
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  .tns-outer::before {
+    display: none;
+  }
+  .tns-outer::after {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-brand {
+    position: relative;
+    left: 50%;
+  }
+}
+@media (max-width: 875px) {
+  .footer-links {
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 620px) {
+  .footer-links {
+    flex-direction: column;
+  }
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 410px) {
+  .form {
+    flex-direction: column;
+  }
+  .navbar-brand {
+    left: 30%;
+  }
 }
