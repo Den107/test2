@@ -13,3 +13,16 @@ let slider = tns({
     }
   }
 });
+
+
+//burger
+const burgerBtn = document.querySelector('.navbar-toggler');
+const burgerClose = document.querySelector('.burger-close');
+const navBurger = document.querySelector('.nav-burger');
+
+burgerBtn.addEventListener('click', () => {
+  navBurger.classList.add('burger-active');
+});
+burgerClose.addEventListener('click', () => {
+  navBurger.classList.remove('burger-active');
+});

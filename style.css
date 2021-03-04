@@ -41,6 +41,56 @@ body {
   color: #2b2b2b;
   text-decoration: none;
 }
+
+.nav-burger {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+  width: 315px;
+  transform: translateX(-100%);
+  transition: all 0.6s;
+}
+.burger-close {
+  padding: 23px 0 0 18px;
+}
+.burger-active {
+  transform: translateX(0);
+}
+.burger-links {
+  margin-top: 42px;
+}
+.burger-links li {
+  padding: 0;
+  list-style: none;
+}
+.burger-links ul {
+  padding: 0;
+}
+.burger-footer {
+  height: 315px;
+  background-color: #2b2b2b;
+  padding-left: 18px;
+}
+.burger-footer .phone a {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #fff;
+}
+.burger-footer .city {
+  padding-top: 36px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+}
+.nav-link {
+  font-weight: 400;
+  color: #2b2b2b;
+}
 .promo {
   color: white;
   min-height: 507px;
