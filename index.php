@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
@@ -50,8 +49,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
       <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -88,8 +86,7 @@
           решения для продвижения <br> Вашего бизнеса.</p>
       </div>
       <div class="d-flex form">
-        <input type="text" class="form-control col-lg-3 me-2 mt-3 " placeholder="Номер телефона"
-          aria-label="Recipient's username" aria-describedby="button-addon2">
+        <input type="text" class="form-control col-lg-3 me-2 mt-3 " placeholder="Номер телефона" aria-label="Recipient's username" aria-describedby="button-addon2">
         <button class="btn btn-danger col-lg-3 mt-3" type="button" id="button-addon2">Обратный звонок</button>
       </div>
 
@@ -102,7 +99,22 @@
     <div class="container">
       <h2 class="news">Новости</h2>
       <div class="my-slider">
-        <div>
+        <?php @require 'connect.php';
+        $sql = "SELECT * FROM news";
+        $res = mysqli_query($conn, $sql);
+        while ($row = $res->fetch_assoc()) :
+        ?>
+          <div>
+            <div class="card text-start" style="width: 18rem;">
+              <div class="card-body">
+                <p class="card-title">"<?= $row['date'] ?>"</p>
+                <p class="card-text">"<?= $row['body'] ?>"</p>
+                <a href="#" class="btn btn-outline-danger">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        <?php endwhile; ?>
+        <!-- <div>
           <div class="card text-start" style="width: 18rem;">
             <div class="card-body">
               <p class="card-title">15.10.2020</p>
@@ -181,17 +193,7 @@
               <a href="#" class="btn btn-outline-danger">Подробнее</a>
             </div>
           </div>
-        </div>
-        <div>
-          <div class="card text-start" style="width: 18rem;">
-            <div class="card-body">
-              <p class="card-title">15.10.2020</p>
-              <p class="card-text">Акции на размещение баннерного
-                панно 20% до конца июля</p>
-              <a href="#" class="btn btn-outline-danger">Подробнее</a>
-            </div>
-          </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
